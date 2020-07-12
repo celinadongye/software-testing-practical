@@ -1,0 +1,13 @@
+Advantages:
+   - Can quickly generate a large number of tests using existing functions
+   - Can find obvious bugs easily using the generated tests
+   - Can use Randoop to cover simple cases and thus, can spend more time writing more specific tests to target code that is not executed frequently
+   - Update tests automatically when code changes by running the Randoop command 
+   - After adding the wrapper classes, it combines the different regular expressions generated to create more complex regular expressions
+
+
+Disadvantages:
+    - Not possible to choose which functions to use nor in which order, resulting in some methods not being used (e.g. 1st -> generate string, 2nd -> generate regex, 3rd -> use match method) 
+    - Needs wrapper methods/classes to improve the test cases (especially in the regex context of this task)
+    - Can cause usage problems depending on the Java compiler version used
+    - Due to the randomness of Randoop the test suite might be unnecessarily large for the coverage it provides. We could potentially get the same coverage with a smaller test suite
